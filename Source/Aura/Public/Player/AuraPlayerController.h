@@ -21,9 +21,8 @@ class AURA_API AAuraPlayerController : public APlayerController
 protected:
 	virtual void BeginPlay() override;
 
-	void Move(const class FInputActionValue& Value);
 
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual void SetupInputComponent() override;
 
 private:
 	// MappingContext
@@ -34,4 +33,5 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<class UInputAction> MoveAction;
 	
+	void Move(const struct FInputActionValue& Value);
 };
