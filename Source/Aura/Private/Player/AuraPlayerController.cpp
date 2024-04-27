@@ -52,9 +52,9 @@ void AAuraPlayerController::Move(const FInputActionValue& Value)
 	// get right vector
 	const FVector RightVector = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 
-	if (APawn* ControllerdPawn = GetPawn<APawn>())
+	if (APawn* ControlledPawn = GetPawn<APawn>())
 	{
-		ControllerdPawn->AddMovementInput(ForwardVector, Input.Y);
-		ControllerdPawn->AddMovementInput(RightVector, Input.X);
+		ControlledPawn->AddMovementInput(ForwardVector, Input.Y);
+		ControlledPawn->AddMovementInput(RightVector, Input.X);
 	}
 }
