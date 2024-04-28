@@ -21,5 +21,4 @@ public:
 	virtual void HighlightActor() override;
 	virtual void UnhighlightActor() override;
 	// IEnemyInterface end
-	bool bShouldHighlight;
 };

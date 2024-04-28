@@ -3,6 +3,7 @@
 
 #include "Character/AuraEnemy.h"
 
+constexpr int32 GCustom_Depth_Red = 250;
 
 AAuraEnemy::AAuraEnemy()
 {
@@ -12,20 +13,21 @@ AAuraEnemy::AAuraEnemy()
 void AAuraEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (bShouldHighlight)
-	{
-		//DrawDebugSphere on the enemy
-		DrawDebugSphere(GetWorld(), GetActorLocation(), 30.f, 12, FColor::Red, false, 0.f, 0, 2.f);
-	}
 }
 
 void AAuraEnemy::HighlightActor()
 {
-	bShouldHighlight = true;
+	GetMesh()->SetRenderCustomDepth(true);
+	GetMesh()->CustomDepthStencilValue = GCustom_Depth_Red;
+	GetWeapon()->SetRenderCustomDepth(true);
+	GetWeapon()->CustomDepthStencilValue = GCustom_Depth_Red;
 }
 
 void AAuraEnemy::UnhighlightActor()
 {
-	bShouldHighlight = false;
+	GetMesh()->SetRenderCustomDepth(false);
+	GetMesh()->CustomDepthStencilValue = 0;
+	GetWeapon()->SetRenderCustomDepth(false);
+	GetWeapon()->CustomDepthStencilValue = 0;
 }
 
