@@ -14,8 +14,12 @@ class AURA_API AAuraEnemy : public AAuraCharacterBase, public IEnemyInterface
 
 public:
 	AAuraEnemy();
+	// tick
+	virtual void Tick(float DeltaTime) override;
 
 	// IEnemyInterface begin
 	virtual void HighlightActor() override;
 	virtual void UnhighlightActor() override;
+	// IEnemyInterface end
+	bool bShouldHighlight;
 };
