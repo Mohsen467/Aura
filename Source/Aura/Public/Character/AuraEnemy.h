@@ -17,8 +17,11 @@ public:
 	// tick
 	virtual void Tick(float DeltaTime) override;
 
+protected:
 	// IEnemyInterface begin
 	virtual void HighlightActor() override;
 	virtual void UnhighlightActor() override;
 	// IEnemyInterface end
+	
+	virtual void BeginPlay() override;
 };

@@ -40,3 +40,10 @@ void AAuraEnemy::UnhighlightActor()
 	GetWeapon()->CustomDepthStencilValue = 0;
 }
 
+void AAuraEnemy::BeginPlay()
+{
+	Super::BeginPlay();
+
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+}
+
