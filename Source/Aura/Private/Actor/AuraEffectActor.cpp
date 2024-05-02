@@ -3,48 +3,35 @@
 
 #include "Actor/AuraEffectActor.h"
 
-#include "AbilitySystemInterface.h"
-#include "AbilitySystem/AuraAttributeSet.h"
-#include "Components/SphereComponent.h"
-
+#include "AbilitySystemBlueprintLibrary.h"
+#include "AbilitySystemComponent.h"
 
 AAuraEffectActor::AAuraEffectActor()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	SetRootComponent(Mesh);
-
-	Sphere = CreateDefaultSubobject<USphereComponent>(TEXT("Sphere"));
-	Sphere->SetupAttachment(GetRootComponent());
-	
-}
-
-void AAuraEffectActor::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
-	// TODO: Should change to Apply a gameplay effect
-	if (const IAbilitySystemInterface* AbilitySystemInterface = Cast<IAbilitySystemInterface>(OtherActor))
-	{
-		const UAuraAttributeSet* AuraAttributeSet = Cast<UAuraAttributeSet>(
-			AbilitySystemInterface->GetAbilitySystemComponent()->GetAttributeSet(UAuraAttributeSet::StaticClass()));
-		UAuraAttributeSet* HackAttributeSet = const_cast<UAuraAttributeSet*>(AuraAttributeSet);
-		HackAttributeSet->SetHealth(AuraAttributeSet->GetHealth() + 25.f);
-		HackAttributeSet->SetMana(AuraAttributeSet->GetMana() + 25.f);
-		Destroy();
-	}
-}
-
-void AAuraEffectActor::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
+	SetRootComponent(CreateDefaultSubobject<USceneComponent>(TEXT("SceneRoot")));
 }
 
 void AAuraEffectActor::BeginPlay()
 {
 	Super::BeginPlay();
+}
 
-	Sphere->OnComponentBeginOverlap.AddDynamic(this, &AAuraEffectActor::OnOverlap);
-	Sphere->OnComponentEndOverlap.AddDynamic(this, &AAuraEffectActor::EndOverlap);
+void AAuraEffectActor::ApplyEffectToTarget(AActor* TargetActor,
+                                           const TSubclassOf<UGameplayEffect> GameplayEffectClass) const
+{
+	UAbilitySystemComponent* AbilitySystemComponent =
+		UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
+	if (!AbilitySystemComponent) return;
+
+	check(GameplayEffectClass);
+	
+	FGameplayEffectContextHandle ContextHandle = AbilitySystemComponent->MakeEffectContext();
+	ContextHandle.AddSourceObject(this);
+	const FGameplayEffectSpecHandle SpecHandle = AbilitySystemComponent->MakeOutgoingSpec(
+		GameplayEffectClass, 1.f, ContextHandle);
+	AbilitySystemComponent->ApplyGameplayEffectSpecToSelf(*SpecHandle.Data.Get());
+	
 }
 
