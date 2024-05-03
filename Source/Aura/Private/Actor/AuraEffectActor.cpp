@@ -35,3 +35,11 @@ void AAuraEffectActor::ApplyEffectToTarget(AActor* TargetActor,
 	
 }
 
+void AAuraEffectActor::OnOverlap(AActor* TargetActor)
+{
+}
+
+void AAuraEffectActor::OnEndOverlap(AActor* TargetActor)
+{
+}
+
