@@ -24,6 +24,7 @@ public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 	// IAbilitySystemInterface end
 	UAttributeSet* GetAttributeSet() const { return AttributeSet; }
+	
 
 protected:
 	UPROPERTY()
