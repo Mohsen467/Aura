@@ -44,4 +44,8 @@ protected:
 	 */
 	UPROPERTY(VisibleAnywhere, Category = "AbilitySystem")
 	TObjectPtr<UAttributeSet> AttributeSet;
+
+	virtual void InitAbilityActorInfo()
+	{
+	}
 };

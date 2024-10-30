@@ -24,4 +24,6 @@ protected:
 	// IEnemyInterface end
 	
 	virtual void BeginPlay() override;
+
+	virtual void InitAbilityActorInfo() override;
 };

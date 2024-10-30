@@ -14,6 +14,11 @@ UAuraAbilitySystemComponent::UAuraAbilitySystemComponent()
 	// ...
 }
 
+void UAuraAbilitySystemComponent::AbilityActorInfoSet()
+{
+	OnGameplayEffectAppliedDelegateToSelf.AddUObject(this, &UAuraAbilitySystemComponent::EffectApplied);
+}
+
 
 // Called when the game starts
 void UAuraAbilitySystemComponent::BeginPlay()
@@ -22,6 +27,12 @@ void UAuraAbilitySystemComponent::BeginPlay()
 
 	// ...
 	
+}
+
+void UAuraAbilitySystemComponent::EffectApplied(UAbilitySystemComponent* AbilitySystemComponent,
+	const FGameplayEffectSpec& EffectSpec, FActiveGameplayEffectHandle ActiveEffectHandle)
+{
+	GEngine->AddOnScreenDebugMessage(1, 5.f, FColor::Blue, "Effect Applied");
 }
 
 
