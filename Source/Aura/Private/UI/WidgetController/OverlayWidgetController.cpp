@@ -42,6 +42,9 @@ void UOverlayWidgetController::BindCallbacksToDependencies()
 				const FString Msg = FString::Printf(TEXT("Ge Tag: %s"), *Tag.ToString());
 
 				GEngine->AddOnScreenDebugMessage(-1, 8.f, FColor::Blue, Msg);
+
+				const FUIWidgetRow* Row = GetDataTableRowByTag<FUIWidgetRow>(MessageWidgetDataTable, Tag);
+				
 			}
 		}
 	);
