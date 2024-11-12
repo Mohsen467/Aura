@@ -56,6 +56,15 @@
     <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\AuraAttributeSet.cpp">
       <Filter>Source\Aura\Private\AbilitySystem</Filter>
     </ClCompile>
+    <Filter Include="Source\Aura\Private\AbilitySystem\ModMagCal">
+      <UniqueIdentifier>{43C70424-30BE-3A8A-B106-E4FADE53680C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\ModMagCal\MMC_ManaMax.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\ModMagCal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\ModMagCal\MMC_MaxHealth.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\ModMagCal</Filter>
+    </ClCompile>
     <Filter Include="Source\Aura\Private\Actor">
       <UniqueIdentifier>{051A7246-5551-3D03-BC41-3B84493932DF}</UniqueIdentifier>
     </Filter>
@@ -83,6 +92,9 @@
     <Filter Include="Source\Aura\Private\Interaction">
       <UniqueIdentifier>{8600DADF-1C2F-3B4E-851E-5CF3B1B94879}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\Interaction\CombatInterface.cpp">
+      <Filter>Source\Aura\Private\Interaction</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Private\Interaction\EnemyInterface.cpp">
       <Filter>Source\Aura\Private\Interaction</Filter>
     </ClCompile>
@@ -131,6 +143,15 @@
     <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\AuraAttributeSet.h">
       <Filter>Source\Aura\Public\AbilitySystem</Filter>
     </ClCompile>
+    <Filter Include="Source\Aura\Public\AbilitySystem\ModMagCal">
+      <UniqueIdentifier>{06B67866-BECA-3F15-9178-18E7891182BA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\ModMagCal\MMC_ManaMax.h">
+      <Filter>Source\Aura\Public\AbilitySystem\ModMagCal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\ModMagCal\MMC_MaxHealth.h">
+      <Filter>Source\Aura\Public\AbilitySystem\ModMagCal</Filter>
+    </ClCompile>
     <Filter Include="Source\Aura\Public\Actor">
       <UniqueIdentifier>{FB1C9C32-0E54-3D43-B3D9-FD86BB6EBCF1}</UniqueIdentifier>
     </Filter>
@@ -158,6 +179,9 @@
     <Filter Include="Source\Aura\Public\Interaction">
       <UniqueIdentifier>{AC69F4E0-FE2C-3C00-9744-FF5ECD46407C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\Interaction\CombatInterface.h">
+      <Filter>Source\Aura\Public\Interaction</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Public\Interaction\EnemyInterface.h">
       <Filter>Source\Aura\Public\Interaction</Filter>
     </ClCompile>
