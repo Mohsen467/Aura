@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/Interface.h"
 #include "UObject/Object.h"
 #include "EnemyInterface.generated.h"
 
@@ -20,6 +21,7 @@ class AURA_API IEnemyInterface
 	GENERATED_BODY()
 
 public:
+	
 	virtual void HighlightActor() = 0;
 	virtual void UnhighlightActor() = 0;
 };

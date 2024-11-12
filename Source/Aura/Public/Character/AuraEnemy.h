@@ -18,12 +18,19 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	// IEnemyInterface begin
+	/** IEnemyInterface begin */
 	virtual void HighlightActor() override;
 	virtual void UnhighlightActor() override;
-	// IEnemyInterface end
+	/** IEnemyInterface end */
+
+	/** ICombatInterface begin */
+	FORCEINLINE virtual int32 GetPlayerLevel() override { return Level; };
+	/** ICombatInterface end */ 
 	
 	virtual void BeginPlay() override;
 
 	virtual void InitAbilityActorInfo() override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Character Class Defaults")
+	int32 Level = 1;
 };
