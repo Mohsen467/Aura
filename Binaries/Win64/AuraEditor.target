@@ -13,12 +13,12 @@
 		"MajorVersion": 5,
 		"MinorVersion": 5,
 		"PatchVersion": 0,
-		"Changelist": 36679577,
+		"Changelist": 37670630,
 		"CompatibleChangelist": 0,
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 0,
 		"BranchName": "++UE5+Release-5.5",
-		"BuildId": "36679577"
+		"BuildId": "37670630"
 	},
 	"BuildProducts": [
 		{
@@ -575,18 +575,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Binaries/Win64/OpenColorIO_2_3.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/OpenImageDenoise.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/OpenImageDenoise_core.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/OpenImageDenoise_device_cpu.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
@@ -2442,10 +2430,6 @@
 			"Type": "SymbolFile"
 		},
 		{
-			"Path": "$(EngineDir)/Binaries/Win64/tbb12.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
 			"Path": "$(EngineDir)/Binaries/Win64/tbbmalloc.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3074,14 +3058,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Developer/TraceDataFiltering/Binaries/Win64/UnrealEditor-TraceDataFiltering.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Developer/TraceDataFiltering/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Developer/UObjectPlugin/Binaries/Win64/UnrealEditor-UObjectPlugin.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3446,6 +3422,14 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Experimental/Animation/SkeletalMeshModelingTools/Binaries/Win64/UnrealEditor-SkeletalMeshModelingTools.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/Animation/SkeletalMeshModelingTools/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Experimental/AutomationUtils/Binaries/Win64/UnrealEditor-AutomationUtils.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3551,6 +3535,18 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Experimental/Dataflow/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/EditorDataStorage/Binaries/Win64/UnrealEditor-TedsCore.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/EditorDataStorage/Binaries/Win64/UnrealEditor-TedsUI.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/EditorDataStorage/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -3675,14 +3671,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Experimental/NFORDenoise/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/OpenImageDenoise/Binaries/Win64/UnrealEditor-OpenImageDenoise.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/OpenImageDenoise/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -26592,18 +26580,6 @@
 			"Type": "NonUFS"
 		},
 		{
-			"Path": "$(EngineDir)/Binaries/Win64/OpenImageDenoise.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/OpenImageDenoise_core.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/OpenImageDenoise_device_cpu.dll",
-			"Type": "NonUFS"
-		},
-		{
 			"Path": "$(EngineDir)/Binaries/Win64/boost_atomic-mt-x64.dll",
 			"Type": "NonUFS"
 		},
@@ -26690,10 +26666,6 @@
 		{
 			"Path": "$(EngineDir)/Binaries/Win64/tbb.pdb",
 			"Type": "DebugNonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/tbb12.dll",
-			"Type": "NonUFS"
 		},
 		{
 			"Path": "$(EngineDir)/Binaries/Win64/tbbmalloc.dll",
@@ -29996,10 +29968,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Developer/TraceDataFiltering/TraceDataFilters.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Developer/UObjectPlugin/UObjectPlugin.uplugin",
 			"Type": "UFS"
 		},
@@ -30160,6 +30128,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Experimental/Animation/SkeletalMeshModelingTools/SkeletalMeshModelingTools.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Experimental/AutomationUtils/AutomationUtils.uplugin",
 			"Type": "UFS"
 		},
@@ -30204,6 +30176,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Experimental/EditorDataStorage/EditorDataStorage.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Experimental/EditorPerformance/EditorPerformance.uplugin",
 			"Type": "UFS"
 		},
@@ -30237,10 +30213,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Experimental/NFORDenoise/NFORDenoise.uplugin",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/OpenImageDenoise/OpenImageDenoise.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -30677,6 +30649,7 @@
 		"DeformerGraph",
 		"DumpGPUServices",
 		"EOSShared",
+		"EditorDataStorage",
 		"EditorDebugTools",
 		"EditorPerformance",
 		"EditorScriptingUtilities",
@@ -30751,7 +30724,6 @@
 		"OnlineSubsystemNull",
 		"OnlineSubsystemUtils",
 		"OodleNetwork",
-		"OpenImageDenoise",
 		"Paper2D",
 		"PerforceSourceControl",
 		"PixWinPlugin",
@@ -30776,6 +30748,7 @@
 		"SequencerAnimTools",
 		"SequencerScripting",
 		"SignificanceManager",
+		"SkeletalMeshModelingTools",
 		"SkeletalReduction",
 		"SoundFields",
 		"SpeedTreeImporter",
@@ -30789,7 +30762,6 @@
 		"TemplateSequence",
 		"TextureFormatOodle",
 		"ToolPresets",
-		"TraceDataFilters",
 		"TraceUtilities",
 		"UMGWidgetPreview",
 		"UObjectPlugin",
