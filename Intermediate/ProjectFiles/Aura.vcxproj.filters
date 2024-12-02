@@ -14,6 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\Aura.uproject.DotSettings.user" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -47,6 +48,12 @@
     <Filter Include="Source\Aura\Private">
       <UniqueIdentifier>{614644D7-6FA7-303B-9CB5-F9579003D315}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\AuraAssetManager.cpp">
+      <Filter>Source\Aura\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\AuraGameplayTags.cpp">
+      <Filter>Source\Aura\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\Aura\Private\AbilitySystem">
       <UniqueIdentifier>{E12B047D-3563-3B0F-A31F-6CA534A3F38C}</UniqueIdentifier>
     </Filter>
@@ -134,6 +141,12 @@
     <Filter Include="Source\Aura\Public">
       <UniqueIdentifier>{812D085E-218E-32A1-B6D9-A817B3D0072A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\AuraAssetManager.h">
+      <Filter>Source\Aura\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Public\AuraGameplayTags.h">
+      <Filter>Source\Aura\Public</Filter>
+    </ClCompile>
     <Filter Include="Source\Aura\Public\AbilitySystem">
       <UniqueIdentifier>{E77883A5-D48A-34F9-8FEA-EA980135BDF7}</UniqueIdentifier>
     </Filter>
