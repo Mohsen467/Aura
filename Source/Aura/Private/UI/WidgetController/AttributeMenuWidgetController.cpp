@@ -18,9 +18,11 @@ void UAttributeMenuWidgetController::BroadcastInitialValues()
 
 	check(AttributeInfo);
 
-	FAuraAttributeInfo PrimaryStrengthInfo = AttributeInfo->FindAttributeInfoForTag(FAuraGameplayTags::Get().Attributes_Primary_Strength);
-
-	PrimaryStrengthInfo.AttributeValue = AuraAttributeSet->GetStrength();
-
-	OnAttributeInfoChanged.Broadcast(PrimaryStrengthInfo);
+	for (auto& Pair : AuraAttributeSet->TagsToAttributes)
+	{
+		
+		FAuraAttributeInfo Info = AttributeInfo->FindAttributeInfoForTag(Pair.Key);
+		Info.AttributeValue = Pair.Value().GetNumericValue(AuraAttributeSet);
+		OnAttributeInfoChanged.Broadcast(Info);
+	}
 }
