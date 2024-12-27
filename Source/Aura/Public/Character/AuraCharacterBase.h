@@ -1,16 +1,17 @@
-// Copyright Mohsen Sadeghi
+// Copyright Druid Mechanics
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "AbilitySystemInterface.h"
-#include "GameplayEffect.h"
 #include "GameFramework/Character.h"
 #include "Interaction/CombatInterface.h"
 #include "AuraCharacterBase.generated.h"
 
-class UAttributeSet;
 class UAbilitySystemComponent;
+class UAttributeSet;
+class UGameplayEffect;
+class UGameplayAbility;
 
 UCLASS(Abstract)
 class AURA_API AAuraCharacterBase : public ACharacter, public IAbilitySystemInterface, public ICombatInterface
@@ -19,37 +20,26 @@ class AURA_API AAuraCharacterBase : public ACharacter, public IAbilitySystemInte
 
 public:
 	AAuraCharacterBase();
-
-	// IAbilitySystemInterface begin
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
-	// IAbilitySystemInterface end
 	UAttributeSet* GetAttributeSet() const { return AttributeSet; }
-	
-	USkeletalMeshComponent* GetWeapon() const { return Weapon; }
-	
 protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	TObjectPtr<USkeletalMeshComponent> Weapon;
 
-	/** Ability System Component
-	 * For Enemy it is implements in EnemyCharacter
-	 * For Player it is implements in PlayerState
-	 */
-	UPROPERTY(VisibleAnywhere, Category = "AbilitySystem")
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	FName WeaponTipSocketName;
+
+	virtual FVector GetCombatSocketLocation() override;
+
+	UPROPERTY()
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
 
-	/** AttributeSet
-	 * For Player it is implements in PlayerState
-	 * For Enemy it is implements in EnemyCharacter
-	 */
-	UPROPERTY(VisibleAnywhere, Category = "AbilitySystem")
+	UPROPERTY()
 	TObjectPtr<UAttributeSet> AttributeSet;
 
-	virtual void InitAbilityActorInfo()
-	{
-	}
+	virtual void InitAbilityActorInfo();
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Attributes")
 	TSubclassOf<UGameplayEffect> DefaultPrimaryAttributes;
@@ -59,11 +49,11 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Attributes")
 	TSubclassOf<UGameplayEffect> DefaultVitalAttributes;
+	
+	void ApplyEffectToSelf(TSubclassOf<UGameplayEffect> GameplayEffectClass, float Level) const;
+	virtual void InitializeDefaultAttributes() const;
 
-	void ApplyEffectToSelf(const TSubclassOf<UGameplayEffect>& GameplayEffectClass, float Level = 1.f) const;
-	void InitializeDefaultAttributes() const;
-
-	void AddCharacterAbilities() const;
+	void AddCharacterAbilities();
 private:
 
 	UPROPERTY(EditAnywhere, Category = "Abilities")

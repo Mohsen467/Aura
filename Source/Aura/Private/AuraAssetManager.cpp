@@ -1,17 +1,24 @@
-// Copyright Mohsen Sadeghi
+// Copyright Druid Mechanics
 
 
 #include "AuraAssetManager.h"
+
+#include "AbilitySystemGlobals.h"
 #include "AuraGameplayTags.h"
 
-const UAuraAssetManager& UAuraAssetManager::Get()
+UAuraAssetManager& UAuraAssetManager::Get()
 {
-	return *Cast<UAuraAssetManager>(GEngine->AssetManager);
+	check(GEngine);
+	
+	UAuraAssetManager* AuraAssetManager = Cast<UAuraAssetManager>(GEngine->AssetManager);
+	return *AuraAssetManager;
 }
 
 void UAuraAssetManager::StartInitialLoading()
 {
 	Super::StartInitialLoading();
-
 	FAuraGameplayTags::InitializeNativeGameplayTags();
+
+	// This is required to use Target Data!
+	UAbilitySystemGlobals::Get().InitGlobalData();
 }

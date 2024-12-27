@@ -1,4 +1,4 @@
-// Copyright Mohsen Sadeghi
+// Copyright Druid Mechanics
 
 #pragma once
 
@@ -7,6 +7,9 @@
 #include "AuraInputConfig.h"
 #include "AuraInputComponent.generated.h"
 
+/**
+ * 
+ */
 UCLASS()
 class AURA_API UAuraInputComponent : public UEnhancedInputComponent
 {
@@ -20,6 +23,7 @@ template <class UserClass, typename PressedFuncType, typename ReleasedFuncType, 
 void UAuraInputComponent::BindAbilityActions(const UAuraInputConfig* InputConfig, UserClass* Object, PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc, HeldFuncType HeldFunc)
 {
 	check(InputConfig);
+
 	for (const FAuraInputAction& Action : InputConfig->AbilityInputActions)
 	{
 		if (Action.InputAction && Action.InputTag.IsValid())
@@ -28,6 +32,7 @@ void UAuraInputComponent::BindAbilityActions(const UAuraInputConfig* InputConfig
 			{
 				BindAction(Action.InputAction, ETriggerEvent::Started, Object, PressedFunc, Action.InputTag);
 			}
+
 			if (ReleasedFunc)
 			{
 				BindAction(Action.InputAction, ETriggerEvent::Completed, Object, ReleasedFunc, Action.InputTag);

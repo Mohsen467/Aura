@@ -1,39 +1,27 @@
-// Copyright Mohsen Sadeghi
+// Copyright Druid Mechanics
 
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AuraCharacterBase.h"
+#include "Character/AuraCharacterBase.h"
 #include "AuraCharacter.generated.h"
 
+/**
+ * 
+ */
 UCLASS()
 class AURA_API AAuraCharacter : public AAuraCharacterBase
 {
 	GENERATED_BODY()
-
 public:
 	AAuraCharacter();
-
-	// spring arm
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Camera")
-	class USpringArmComponent* SpringArmComponent;
-
-	// Camera
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Camera")
-	class UCameraComponent* CameraComponent;
-
 	virtual void PossessedBy(AController* NewController) override;
-	
 	virtual void OnRep_PlayerState() override;
 
-	/** ICombatInterface begin */
+	/** Combat Interface */
 	virtual int32 GetPlayerLevel() override;
-	/** ICombatInterface end */
+	/** end Combat Interface */
 	
-protected:
-	virtual void BeginPlay() override;
-
 private:
 	virtual void InitAbilityActorInfo() override;
-	
 };

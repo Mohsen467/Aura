@@ -1,4 +1,4 @@
-// Copyright Mohsen Sadeghi
+// Copyright Druid Mechanics
 
 #pragma once
 
@@ -13,9 +13,11 @@ UCLASS()
 class AURA_API UAuraAssetManager : public UAssetManager
 {
 	GENERATED_BODY()
-
 public:
-	static const UAuraAssetManager& Get();
+
+	static UAuraAssetManager& Get();
+
+protected:
 
 	virtual void StartInitialLoading() override;
 };

@@ -60,8 +60,35 @@
     <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\AuraAbilitySystemComponent.cpp">
       <Filter>Source\Aura\Private\AbilitySystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\AuraAbilitySystemLibrary.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\AuraAttributeSet.cpp">
       <Filter>Source\Aura\Private\AbilitySystem</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Private\AbilitySystem\Abilities">
+      <UniqueIdentifier>{DFA34C06-BED9-3B4B-AC97-7DAF6B5D85CD}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\Abilities\AuraGameplayAbility.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\Abilities\AuraProjectileSpell.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Private\AbilitySystem\AbilityTasks">
+      <UniqueIdentifier>{C3A9FB8B-DD1A-3A80-8CF7-326C27A917BC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\AbilityTasks\TargetDataUnderMouse.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\AbilityTasks</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Private\AbilitySystem\Data">
+      <UniqueIdentifier>{1DE59CCC-C5AD-3B72-B94D-B45AD4BE9D00}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\Data\AttributeInfo.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\Data\CharacterClassInfo.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\Data</Filter>
     </ClCompile>
     <Filter Include="Source\Aura\Private\AbilitySystem\ModMagCal">
       <UniqueIdentifier>{43C70424-30BE-3A8A-B106-E4FADE53680C}</UniqueIdentifier>
@@ -72,10 +99,22 @@
     <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\ModMagCal\MMC_MaxHealth.cpp">
       <Filter>Source\Aura\Private\AbilitySystem\ModMagCal</Filter>
     </ClCompile>
+    <Filter Include="Source\Aura\Private\AbilitySystem\ModMagCalc">
+      <UniqueIdentifier>{07CB3620-4FAE-3564-9604-7B08CD93389D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\ModMagCalc\MMC_MaxHealth.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\ModMagCalc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\ModMagCalc\MMC_MaxMana.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\ModMagCalc</Filter>
+    </ClCompile>
     <Filter Include="Source\Aura\Private\Actor">
       <UniqueIdentifier>{051A7246-5551-3D03-BC41-3B84493932DF}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Aura\Private\Actor\AuraEffectActor.cpp">
+      <Filter>Source\Aura\Private\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\Actor\AuraProjectile.cpp">
       <Filter>Source\Aura\Private\Actor</Filter>
     </ClCompile>
     <Filter Include="Source\Aura\Private\Character">
@@ -95,6 +134,21 @@
     </Filter>
     <ClCompile Include="..\..\Source\Aura\Private\Framework\AuraGameMode.cpp">
       <Filter>Source\Aura\Private\Framework</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Private\Game">
+      <UniqueIdentifier>{08D199A1-70C2-3BEB-A332-B90A816A4CF5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\Game\AuraGameModeBase.cpp">
+      <Filter>Source\Aura\Private\Game</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Private\Input">
+      <UniqueIdentifier>{C3AD8B08-3AA0-3E95-A897-C6703F5DA59C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\Input\AuraInputComponent.cpp">
+      <Filter>Source\Aura\Private\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\Input\AuraInputConfig.cpp">
+      <Filter>Source\Aura\Private\Input</Filter>
     </ClCompile>
     <Filter Include="Source\Aura\Private\Interaction">
       <UniqueIdentifier>{8600DADF-1C2F-3B4E-851E-5CF3B1B94879}</UniqueIdentifier>
@@ -132,6 +186,9 @@
     <Filter Include="Source\Aura\Private\UI\WidgetController">
       <UniqueIdentifier>{D768110E-7A16-3E45-95C4-8523946E0A11}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\UI\WidgetController\AttributeMenuWidgetController.cpp">
+      <Filter>Source\Aura\Private\UI\WidgetController</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Private\UI\WidgetController\AuraWidgetController.cpp">
       <Filter>Source\Aura\Private\UI\WidgetController</Filter>
     </ClCompile>
@@ -153,8 +210,35 @@
     <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\AuraAbilitySystemComponent.h">
       <Filter>Source\Aura\Public\AbilitySystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\AuraAbilitySystemLibrary.h">
+      <Filter>Source\Aura\Public\AbilitySystem</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\AuraAttributeSet.h">
       <Filter>Source\Aura\Public\AbilitySystem</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Public\AbilitySystem\Abilities">
+      <UniqueIdentifier>{86B8CD5C-F5F0-31A8-90A9-E38073EC176F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\Abilities\AuraGameplayAbility.h">
+      <Filter>Source\Aura\Public\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\Abilities\AuraProjectileSpell.h">
+      <Filter>Source\Aura\Public\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Public\AbilitySystem\AbilityTasks">
+      <UniqueIdentifier>{4B70318B-AB04-3DCD-99BF-AE86B9C39812}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\AbilityTasks\TargetDataUnderMouse.h">
+      <Filter>Source\Aura\Public\AbilitySystem\AbilityTasks</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Public\AbilitySystem\Data">
+      <UniqueIdentifier>{FF426A13-05E2-3736-B7C4-5F4B5E95E426}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\Data\AttributeInfo.h">
+      <Filter>Source\Aura\Public\AbilitySystem\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\Data\CharacterClassInfo.h">
+      <Filter>Source\Aura\Public\AbilitySystem\Data</Filter>
     </ClCompile>
     <Filter Include="Source\Aura\Public\AbilitySystem\ModMagCal">
       <UniqueIdentifier>{06B67866-BECA-3F15-9178-18E7891182BA}</UniqueIdentifier>
@@ -165,10 +249,22 @@
     <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\ModMagCal\MMC_MaxHealth.h">
       <Filter>Source\Aura\Public\AbilitySystem\ModMagCal</Filter>
     </ClCompile>
+    <Filter Include="Source\Aura\Public\AbilitySystem\ModMagCalc">
+      <UniqueIdentifier>{8949CBB1-5558-3254-991D-8D941786DDCB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\ModMagCalc\MMC_MaxHealth.h">
+      <Filter>Source\Aura\Public\AbilitySystem\ModMagCalc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Public\AbilitySystem\ModMagCalc\MMC_MaxMana.h">
+      <Filter>Source\Aura\Public\AbilitySystem\ModMagCalc</Filter>
+    </ClCompile>
     <Filter Include="Source\Aura\Public\Actor">
       <UniqueIdentifier>{FB1C9C32-0E54-3D43-B3D9-FD86BB6EBCF1}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Aura\Public\Actor\AuraEffectActor.h">
+      <Filter>Source\Aura\Public\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Public\Actor\AuraProjectile.h">
       <Filter>Source\Aura\Public\Actor</Filter>
     </ClCompile>
     <Filter Include="Source\Aura\Public\Character">
@@ -188,6 +284,21 @@
     </Filter>
     <ClCompile Include="..\..\Source\Aura\Public\Framework\AuraGameMode.h">
       <Filter>Source\Aura\Public\Framework</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Public\Game">
+      <UniqueIdentifier>{DCB2C027-DDED-3CDF-90B1-320D9F1C597B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\Game\AuraGameModeBase.h">
+      <Filter>Source\Aura\Public\Game</Filter>
+    </ClCompile>
+    <Filter Include="Source\Aura\Public\Input">
+      <UniqueIdentifier>{990A1480-E998-3054-91AE-4C9BB6814F97}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\Input\AuraInputComponent.h">
+      <Filter>Source\Aura\Public\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Public\Input\AuraInputConfig.h">
+      <Filter>Source\Aura\Public\Input</Filter>
     </ClCompile>
     <Filter Include="Source\Aura\Public\Interaction">
       <UniqueIdentifier>{AC69F4E0-FE2C-3C00-9744-FF5ECD46407C}</UniqueIdentifier>
@@ -225,6 +336,9 @@
     <Filter Include="Source\Aura\Public\UI\WidgetController">
       <UniqueIdentifier>{3BCD7258-E95C-3A59-ACAC-9F88D343DD76}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Aura\Public\UI\WidgetController\AttributeMenuWidgetController.h">
+      <Filter>Source\Aura\Public\UI\WidgetController</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Public\UI\WidgetController\AuraWidgetController.h">
       <Filter>Source\Aura\Public\UI\WidgetController</Filter>
     </ClCompile>
